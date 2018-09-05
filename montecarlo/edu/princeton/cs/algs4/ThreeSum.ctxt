@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ThreeSum
+comment0.text=\r\n\ \ The\ {@code\ ThreeSum}\ class\ provides\ static\ methods\ for\ counting\r\n\ \ and\ printing\ the\ number\ of\ triples\ in\ an\ array\ of\ integers\ that\ sum\ to\ 0\r\n\ \ (ignoring\ integer\ overflow).\r\n\ \ <p>\r\n\ \ This\ implementation\ uses\ a\ triply\ nested\ loop\ and\ takes\ proportional\ to\ n^3,\r\n\ \ where\ n\ is\ the\ number\ of\ integers.\r\n\ \ <p>\r\n\ \ For\ additional\ documentation,\ see\ <a\ href\="https\://algs4.cs.princeton.edu/14analysis">Section\ 1.4</a>\ of\r\n\ \ <i>Algorithms,\ 4th\ Edition</i>\ by\ Robert\ Sedgewick\ and\ Kevin\ Wayne.\r\n\r\n\ \ @author\ Robert\ Sedgewick\r\n\ \ @author\ Kevin\ Wayne\r\n
+comment1.params=
+comment1.target=ThreeSum()
+comment2.params=a
+comment2.target=void\ printAll(int[])
+comment2.text=\r\n\ Prints\ to\ standard\ output\ the\ (i,\ j,\ k)\ with\ {@code\ i\ <\ j\ <\ k}\r\n\ such\ that\ {@code\ a[i]\ +\ a[j]\ +\ a[k]\ \=\=\ 0}.\r\n\r\n\ @param\ a\ the\ array\ of\ integers\r\n
+comment3.params=a
+comment3.target=int\ count(int[])
+comment3.text=\r\n\ Returns\ the\ number\ of\ triples\ (i,\ j,\ k)\ with\ {@code\ i\ <\ j\ <\ k}\r\n\ such\ that\ {@code\ a[i]\ +\ a[j]\ +\ a[k]\ \=\=\ 0}.\r\n\r\n\ @param\ \ a\ the\ array\ of\ integers\r\n\ @return\ the\ number\ of\ triples\ (i,\ j,\ k)\ with\ {@code\ i\ <\ j\ <\ k}\r\n\ \ \ \ \ \ \ \ \ such\ that\ {@code\ a[i]\ +\ a[j]\ +\ a[k]\ \=\=\ 0}\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ Reads\ in\ a\ sequence\ of\ integers\ from\ a\ file,\ specified\ as\ a\ command-line\ argument;\r\n\ counts\ the\ number\ of\ triples\ sum\ to\ exactly\ zero;\ prints\ out\ the\ time\ to\ perform\r\n\ the\ computation.\r\n\r\n\ @param\ args\ the\ command-line\ arguments\r\n
+numComments=5

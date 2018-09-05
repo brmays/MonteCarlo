@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=DrawListener
+comment1.params=x\ y
+comment1.target=void\ mousePressed(double,\ double)
+comment1.text=\r\n\ Invoked\ when\ the\ mouse\ has\ been\ pressed.\r\n\r\n\ @param\ x\ the\ x-coordinate\ of\ the\ mouse\r\n\ @param\ y\ the\ y-coordinate\ of\ the\ mouse\r\n
+comment2.params=x\ y
+comment2.target=void\ mouseDragged(double,\ double)
+comment2.text=\r\n\ Invoked\ when\ the\ mouse\ has\ been\ dragged.\r\n\r\n\ @param\ x\ the\ x-coordinate\ of\ the\ mouse\r\n\ @param\ y\ the\ y-coordinate\ of\ the\ mouse\r\n
+comment3.params=x\ y
+comment3.target=void\ mouseReleased(double,\ double)
+comment3.text=\r\n\ Invoked\ when\ the\ mouse\ has\ been\ released.\r\n\r\n\ @param\ x\ the\ x-coordinate\ of\ the\ mouse\r\n\ @param\ y\ the\ y-coordinate\ of\ the\ mouse\r\n
+comment4.params=c
+comment4.target=void\ keyTyped(char)
+comment4.text=\r\n\ Invoked\ when\ a\ key\ has\ been\ typed.\r\n\r\n\ @param\ c\ the\ character\ typed\r\n
+comment5.params=keycode
+comment5.target=void\ keyPressed(int)
+comment5.text=\r\n\ Invoked\ when\ a\ key\ has\ been\ pressed.\r\n\r\n\ @param\ keycode\ the\ key\ combination\ pressed\r\n
+comment6.params=keycode
+comment6.target=void\ keyReleased(int)
+comment6.text=\r\n\ Invoked\ when\ a\ key\ has\ been\ released.\r\n\r\n\ @param\ keycode\ the\ key\ combination\ released\r\n
+numComments=7

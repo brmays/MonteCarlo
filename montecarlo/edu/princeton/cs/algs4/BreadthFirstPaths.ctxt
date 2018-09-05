@@ -1,0 +1,32 @@
+#BlueJ class context
+comment0.target=BreadthFirstPaths
+comment0.text=\r\n\ \ The\ {@code\ BreadthFirstPaths}\ class\ represents\ a\ data\ type\ for\ finding\r\n\ \ shortest\ paths\ (number\ of\ edges)\ from\ a\ source\ vertex\ <em>s</em>\r\n\ \ (or\ a\ set\ of\ source\ vertices)\r\n\ \ to\ every\ other\ vertex\ in\ an\ undirected\ graph.\r\n\ \ <p>\r\n\ \ This\ implementation\ uses\ breadth-first\ search.\r\n\ \ The\ constructor\ takes\ time\ proportional\ to\ <em>V</em>\ +\ <em>E</em>,\r\n\ \ where\ <em>V</em>\ is\ the\ number\ of\ vertices\ and\ <em>E</em>\ is\ the\ number\ of\ edges.\r\n\ \ Each\ call\ to\ {@link\ \#distTo(int)}\ and\ {@link\ \#hasPathTo(int)}\ takes\ constant\ time;\r\n\ \ each\ call\ to\ {@link\ \#pathTo(int)}\ takes\ time\ proportional\ to\ the\ length\r\n\ \ of\ the\ path.\r\n\ \ It\ uses\ extra\ space\ (not\ including\ the\ graph)\ proportional\ to\ <em>V</em>.\r\n\ \ <p>\r\n\ \ For\ additional\ documentation,\r\n\ \ see\ <a\ href\="https\://algs4.cs.princeton.edu/41graph">Section\ 4.1</a>\ \ \ \r\n\ \ of\ <i>Algorithms,\ 4th\ Edition</i>\ by\ Robert\ Sedgewick\ and\ Kevin\ Wayne.\r\n\r\n\ \ @author\ Robert\ Sedgewick\r\n\ \ @author\ Kevin\ Wayne\r\n
+comment1.params=G\ s
+comment1.target=BreadthFirstPaths(Graph,\ int)
+comment1.text=\r\n\ Computes\ the\ shortest\ path\ between\ the\ source\ vertex\ {@code\ s}\r\n\ and\ every\ other\ vertex\ in\ the\ graph\ {@code\ G}.\r\n\ @param\ G\ the\ graph\r\n\ @param\ s\ the\ source\ vertex\r\n\ @throws\ IllegalArgumentException\ unless\ {@code\ 0\ <\=\ s\ <\ V}\r\n
+comment10.params=vertices
+comment10.target=void\ validateVertices(java.lang.Iterable)
+comment11.params=args
+comment11.target=void\ main(java.lang.String[])
+comment11.text=\r\n\ Unit\ tests\ the\ {@code\ BreadthFirstPaths}\ data\ type.\r\n\r\n\ @param\ args\ the\ command-line\ arguments\r\n
+comment2.params=G\ sources
+comment2.target=BreadthFirstPaths(Graph,\ java.lang.Iterable)
+comment2.text=\r\n\ Computes\ the\ shortest\ path\ between\ any\ one\ of\ the\ source\ vertices\ in\ {@code\ sources}\r\n\ and\ every\ other\ vertex\ in\ graph\ {@code\ G}.\r\n\ @param\ G\ the\ graph\r\n\ @param\ sources\ the\ source\ vertices\r\n\ @throws\ IllegalArgumentException\ unless\ {@code\ 0\ <\=\ s\ <\ V}\ for\ each\ vertex\r\n\ \ \ \ \ \ \ \ \ {@code\ s}\ in\ {@code\ sources}\r\n
+comment3.params=G\ s
+comment3.target=void\ bfs(Graph,\ int)
+comment4.params=G\ sources
+comment4.target=void\ bfs(Graph,\ java.lang.Iterable)
+comment5.params=v
+comment5.target=boolean\ hasPathTo(int)
+comment5.text=\r\n\ Is\ there\ a\ path\ between\ the\ source\ vertex\ {@code\ s}\ (or\ sources)\ and\ vertex\ {@code\ v}?\r\n\ @param\ v\ the\ vertex\r\n\ @return\ {@code\ true}\ if\ there\ is\ a\ path,\ and\ {@code\ false}\ otherwise\r\n\ @throws\ IllegalArgumentException\ unless\ {@code\ 0\ <\=\ v\ <\ V}\r\n
+comment6.params=v
+comment6.target=int\ distTo(int)
+comment6.text=\r\n\ Returns\ the\ number\ of\ edges\ in\ a\ shortest\ path\ between\ the\ source\ vertex\ {@code\ s}\r\n\ (or\ sources)\ and\ vertex\ {@code\ v}?\r\n\ @param\ v\ the\ vertex\r\n\ @return\ the\ number\ of\ edges\ in\ a\ shortest\ path\r\n\ @throws\ IllegalArgumentException\ unless\ {@code\ 0\ <\=\ v\ <\ V}\r\n
+comment7.params=v
+comment7.target=java.lang.Iterable\ pathTo(int)
+comment7.text=\r\n\ Returns\ a\ shortest\ path\ between\ the\ source\ vertex\ {@code\ s}\ (or\ sources)\r\n\ and\ {@code\ v},\ or\ {@code\ null}\ if\ no\ such\ path.\r\n\ @param\ \ v\ the\ vertex\r\n\ @return\ the\ sequence\ of\ vertices\ on\ a\ shortest\ path,\ as\ an\ Iterable\r\n\ @throws\ IllegalArgumentException\ unless\ {@code\ 0\ <\=\ v\ <\ V}\r\n
+comment8.params=G\ s
+comment8.target=boolean\ check(Graph,\ int)
+comment9.params=v
+comment9.target=void\ validateVertex(int)
+numComments=12
