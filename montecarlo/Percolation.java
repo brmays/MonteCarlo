@@ -9,7 +9,6 @@ import edu.princeton.cs.algs4.CollisionSystem;
 import edu.princeton.cs.algs4.Particle;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-import java.util.Random;
 
 public class Percolation {
        public boolean[] grid;
@@ -36,31 +35,35 @@ public class Percolation {
        }
        
        public void open(int row, int col)  {
-           int curSite = row*col;
+           if (row <= 0 || row > max) throw new IndexOutOfBoundsException("row index i out of bounds");
+           if (col <= 0 || col > max) throw new IndexOutOfBoundsException("col index i out of bounds");
+           
+           int curSite = xyToIndex(row, col);
+           
            if(!isOpen(row, col)) {
                grid[curSite]=true;
                numOpen++;
                if(row > 1 && isOpen(row-1, col)) { //look up
-                   uf.union(curSite, (row-1)*col);
+                   uf.union(curSite, xyToIndex((row-1), col));
                }
                if(row < max && isOpen(row+1, col)) { //look down
-                   uf.union(curSite, (row+1)*col);
+                   uf.union(curSite, xyToIndex((row+1), col));
                }
                if(col > 1 && isOpen(row, col-1)) { //look left
-                   uf.union(row*(col-1), curSite);
+                   uf.union(xyToIndex(row, (col-1)), curSite);
                }
                if(col < max && isOpen(row, col+1)) { //look right
-                   uf.union(row*(col+1), curSite);
+                   uf.union(xyToIndex(row, (col+1)), curSite);
                }
            }
        }
        
        public boolean isOpen(int row, int col) {
-           return grid[row*col];
+           return grid[xyToIndex(row, col)];
        }
        
        public boolean isFull(int row, int col)  {
-           return uf.connected(0, (row*col));
+           return isOpen(row, col) && uf.connected(0, (xyToIndex(row, col)));
        }
        
        public int numberOfOpenSites() {
@@ -70,54 +73,8 @@ public class Percolation {
        public boolean percolates() {
            return uf.connected(0, virtExit);
        }
-    
-       public void tester() {
-           Random rand = new Random();
-           int n = 5;
-           boolean readyToPercolate = true;
-           
-           while (readyToPercolate) {
-               int changeTrack = numOpen;
-               int col = rand.nextInt(n) + 1;
-               int row = rand.nextInt(n) + 1;
-               open(row, col);
-               if (changeTrack != numOpen) {
-                   if (percolates()) {
-                       break;
-                   }
-                   
-               }
-               for (int i = 1; i <=n*n; i++) {
-               if (grid[i] && !uf.connected(0, i)) {
-                   System.out.print(" O ");
-               } else if (grid[i] && uf.connected(0, i)) {
-                   System.out.print(" 0 ");
-               } else {
-                   System.out.print(" - ");
-               }
-               if (i%n==0) {
-                   System.out.print("\n");
-               }
-           }
-           
-           System.out.println("___________________");
-           }
-           
-           System.out.println(numOpen + " sites were open when it started percolating. This is about " + ((float) numOpen/(n*n)));
-           int row = 1;
-           int col = 1;
-           for (int i = 1; i <=n*n; i++) {
-               if (grid[i] && !uf.connected(0, i)) {
-                   System.out.print(" O ");
-               } else if (grid[i] && uf.connected(0, i)) {
-                   System.out.print(" 0 ");
-               } else {
-                   System.out.print(" - ");
-               }
-               if (i%n==0) {
-                   System.out.print("\n");
-               }
-           }
-       }
-    }
+       private int xyToIndex(int row, int col) {
+           return (row - 1) * max + col;
+        }
+}
 
